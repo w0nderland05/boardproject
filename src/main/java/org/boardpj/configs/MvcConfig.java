@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.boardpj.configs.Interceptors.SiteConfigInterceptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -11,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @RequiredArgsConstructor
+@EnableJpaAuditing //내부에 프록시가 만들어지고,엔티티Auditing 연결
 public class MvcConfig implements WebMvcConfigurer {
 
     @Value("${file.upload.path}")
