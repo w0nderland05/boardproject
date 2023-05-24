@@ -11,7 +11,6 @@
     <script th:src="@{/js/front/common.js?v={v}(v=${cssJsVersion})}}"></script>
     <script th:each="jsFile :${addScript}" th:src="@{js/front/{jsFile}.js?v={v}(jsFile=${jsFile},v=${cssJsVersion})}"></script>
     <th:block layout:fragment="addScript"></th:block>
-
 </head>
  <body>
   <header th:replace="~{outlines/front/header::common}"></header>
