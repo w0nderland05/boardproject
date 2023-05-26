@@ -42,16 +42,18 @@ public class JoinValidator implements Validator, MobileValidator, PasswordValida
             errors.rejectValue("userId", "Validation.duplication.userId");
         }
 
-        //2. 비밀번호 형식 체크(알파벳(대문자,소문자), 숫자, 특수문자 포함 )
-        if(userPw != null && !userPw.isBlank()&& (!alphaCheck(userPw, false)
-                || !numCheck(userPw)
-                || !specialCharsCheck(userPw))){
-            errors.rejectValue("userPw", "Validation.complexity.password");
+        // 2. 비밀번호 복잡성 체크(알파벳(대문자, 소문자), 숫자, 특수문자))
+        if (userPw != null && !userPw.isBlank()
+                && (!alphaCheck(userPw, false)
+                || !numberCheck(userPw)
+                || !specialCharsCheck(userPw))) {
 
+            errors.rejectValue("userPw", "Validation.complexity.password");
         }
 
-        //3. 비밀번호 비밇번호 확인 일치 여부
-        if(userPw != null && !userPw.isBlank() && userPwRe !=null && !userPwRe.isBlank() && !userPw.equals(userPwRe)) {
+        // 3. 비밀번호와 비밀번호 확인 일치
+        if (userPw != null && !userPw.isBlank()
+                && userPwRe != null && !userPwRe.isBlank() && !userPw.equals(userPwRe)) {
             errors.rejectValue("userPwRe", "Validation.incorrect.userPwRe");
         }
         //4. 휴대전화번호(선택) - 입력된 경우 형식 체크
