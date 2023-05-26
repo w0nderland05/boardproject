@@ -12,7 +12,7 @@ public class CommonException extends RuntimeException{
     protected HttpStatus httpStatus; //응답코드
 
     static{
-        bundleValidation = ResourceBundle.getBundle("messages.validation");
+        bundleValidation = ResourceBundle.getBundle("messages.validations");
         bundleError = ResourceBundle.getBundle("messages.errors");
 
     }

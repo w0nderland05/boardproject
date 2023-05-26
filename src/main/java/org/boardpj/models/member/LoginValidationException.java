@@ -13,6 +13,7 @@ public class LoginValidationException extends CommonException {
 
 
     public LoginValidationException(String code) {
+
         super(bundleValidation.getString(code), HttpStatus.BAD_REQUEST);
     }
     public LoginValidationException(String field, String code){
