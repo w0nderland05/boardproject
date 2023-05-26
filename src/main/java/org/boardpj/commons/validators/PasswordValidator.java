@@ -1,5 +1,7 @@
 package org.boardpj.commons.validators;
 
+import java.util.regex.Pattern;
+
 public interface PasswordValidator {
     /**
      * 비밀번호 형식 체크 - 알파벳 체크
@@ -11,7 +13,8 @@ public interface PasswordValidator {
      */
     default boolean alphaCheck(String password, boolean caseIncentive){
         if(caseIncentive){ //대소문자 구분없이 체크
-            return password.matches("[a-zA-Z]+"); //+한자이상 포함
+            Pattern pattern = Pattern.compile("[a-z]+", Pattern.CASE_INSENSITIVE);
+            return pattern.matcher(password).find();
 
         }
 
