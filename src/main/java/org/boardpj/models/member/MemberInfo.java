@@ -2,6 +2,7 @@ package org.boardpj.models.member;
 
 import lombok.Builder;
 import lombok.Data;
+import org.boardpj.commons.constants.Role;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -15,6 +16,8 @@ public class MemberInfo implements UserDetails { //회원정보 관련 클래스
     private String userNm;
     private String email;
     private String mobile;
+
+    private Role roles;
 
     private Collection<GrantedAuthority> authorities; //
 

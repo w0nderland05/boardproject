@@ -31,6 +31,7 @@ private final MemberRepository repository;
                 .userNm(member.getUserNm())
                 .email(member.getEmail())
                 .mobile(member.getMobile())
+                .roles(member.getRoles())
                 .authorities(authorities)
                 .build();
 
