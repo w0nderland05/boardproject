@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.boardpj.commons.constants.Role;
 
 @Entity
 @Data
@@ -39,4 +40,7 @@ public class Member extends BaseEntity {
     @Lob
     private String termsAgree;//약관동의 내역(추후 JSON형태로)
 
+    @Enumerated(EnumType.STRING)
+    @Column(length = 10, nullable = false)
+    private Role roles = Role.USER;
 }
