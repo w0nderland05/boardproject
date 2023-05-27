@@ -6,7 +6,9 @@ import org.boardpj.entities.Member;
 import org.boardpj.models.member.MemberInfo;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MemberUtil {
     @Autowired
     private HttpSession session;
