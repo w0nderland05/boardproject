@@ -6,8 +6,8 @@
     <meta name="_csrf_header" th:content="${_csrf.headerName}">
     <title th:if="${pageTitle != null}" th:text="${pageTitle}"></title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="stlyeshteet" type="text/css" th:href="@{/css/front/style.css?v={v}(v=${cssJsVersion})}">
-    <link rel="stlyeshteet" type="text/css" th:each="file:${addCss}" th:href="@{/css/front/{cssFile}.css?v={v}(cssFile=${file}, v=${cssJsVersion})}"> <!--파일은 있는 경우만 추가-->
+    <link rel="stlyesheet" type="text/css" th:href="@{/css/front/style.css?v={v}(v=${cssJsVersion})}">
+    <link rel="stlyesheet" type="text/css" th:each="file:${addCss}" th:href="@{/css/front/{cssFile}.css?v={v}(cssFile=${file}, v=${cssJsVersion})}"> <!--파일은 있는 경우만 추가-->
     <th:block layout:fragment="addCss"></th:block> <!--추후 더 추가되는 부분 추가할때 유연하게 사용-->
     <script th:src="@{/js/front/common.js?v={v}(v=${cssJsVersion})}"></script>
     <script th:each="jsFile :${addScript}" th:src="@{js/front/{jsFile}.js?v={v}(jsFile=${jsFile},v=${cssJsVersion})}"></script>

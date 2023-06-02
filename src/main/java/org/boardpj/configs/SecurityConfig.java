@@ -29,7 +29,7 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests() //url패턴에 따라 접근권한 설정
                 .requestMatchers("/mypage/**").authenticated()    //회원전용 url
-                .requestMatchers("/admin/**").hasAuthority("ADMIN") //관리자 전용
+               // .requestMatchers("/admin/**").hasAuthority("ADMIN") //관리자 전용
                 .anyRequest().permitAll(); //그외 모든 페이지는 모든 회원이 접근가능
 
         http.exceptionHandling()
