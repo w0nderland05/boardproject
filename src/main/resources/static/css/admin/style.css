@@ -54,3 +54,9 @@ aside li > a.on:after { content: ''; display: block; position: absolute; width: 
 .btns { display: flex; width: 400px; margin: 0 auto; }
 .btns > button { width: 0; flex-grow: 1; height: 50px; font-size: 18px; border: 1px solid #000; }
 .btns > button:last-of-type { background: #000; color: #fff; }
+
+/** 기본 메세지 상자 스타일 */
+.message { box-shadow: 2px 2px 5px #36466d; padding: 15px 25px; text-align: center; background: #fff; font-size: 18px; color: #36466d; margin-bottom: 10px; border-radius: 5px; }
+
+/**기본 제목 스타일 */
+h1 {font-size: 30px; font-weight: bold; margin:0; margin-bottom:25px; line-height: 1; padding: 0;}
