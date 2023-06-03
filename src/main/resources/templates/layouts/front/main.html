@@ -4,20 +4,25 @@
 <head>
     <meta name="_csrf" th:content="${_csrf.token}">
     <meta name="_csrf_header" th:content="${_csrf.headerName}">
-    <title th:if="${pageTitle != null}" th:text="${pageTitle}"></title>
+    <title>
+    </title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="stlyesheet" type="text/css" th:href="@{/css/front/style.css?v={v}(v=${cssJsVersion})}">
-    <link rel="stlyesheet" type="text/css" th:each="file:${addCss}" th:href="@{/css/front/{cssFile}.css?v={v}(cssFile=${file}, v=${cssJsVersion})}"> <!--파일은 있는 경우만 추가-->
-    <th:block layout:fragment="addCss"></th:block> <!--추후 더 추가되는 부분 추가할때 유연하게 사용-->
-    <script th:src="@{/js/front/common.js?v={v}(v=${cssJsVersion})}"></script>
-    <script th:each="jsFile :${addScript}" th:src="@{js/front/{jsFile}.js?v={v}(jsFile=${jsFile},v=${cssJsVersion})}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/front/style.css?v={v}(v=${siteConfig.cssJsVersion})}">
+    <link rel="stylesheet" type="text/css" th:each="file : ${addCss}" th:href="@{/css/front/{cssFile}.css?v={v}(cssFile=${file}, v=${siteConfig.cssJsVersion})}">
+    <th:block layout:fragment="addCss"></th:block>
+
+    <script th:src="@{/js/front/common.js?v={v}(v=${siteConfig.cssJsVersion})}"></script>
+    <script th:each="jsFile : ${addScript}"
+            th:src="@{/js/front/{jsFile}.js?v={v}(jsFile=${jsFile}, v=${siteConfig.cssJsVersion})}"></script>
     <th:block layout:fragment="addScript"></th:block>
 </head>
- <body>
-  <header th:replace="~{outlines/front/header::common}"></header>
-  <main layout:fragment="content"></main>
-  <footer th:replace="~{outlines/front/footer::common}"></footer>
-  <iframe name="iframeProcess" class="dn"></iframe> <!--자바스크립트나 양식 페이지 이동없이 alert 이용해서 쓸때 유용한 hidden 프레임-->
- </body>
+<body>
+<header th:replace="~{outlines/front/header::common}"></header>
+<main>
+    <section layout:fragment="content"></section>
+</main>
+<footer th:replace="~{outlines/front/footer::common}"></footer>
+<iframe name="iframeProcess" class="dn"></iframe> <!--자바스크립트나 양식 페이지 이동없이 alert 이용해서 쓸때 유용한 hidden 프레임-->
+</body>
 
 </html>

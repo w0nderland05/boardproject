@@ -24,9 +24,9 @@ public class SiteConfigInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         /**사이트 설정조회 */
-        Map<String, String> siteConfigs = infoService.get("siteConfig", new TypeReference<Map<String, String>>(){});
-       request.setAttribute("cssJsVersion",1); //관리자에서 버전바꾸면 자동으로 바뀌도록
-
+        Map<String, String> siteConfigs = infoService.get("siteConfig", new
+                TypeReference<Map<String, String>>(){});
+        request.setAttribute("siteConfig", siteConfigs);
         return true;
     }
 }
