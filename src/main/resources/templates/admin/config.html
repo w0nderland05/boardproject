@@ -5,8 +5,8 @@
 <section layout:fragment ="content">
  <th:block th:replace="~{admin/commons/_message::message}"></th:block>
  <h1 th:text="${title}" ></h1>
- <form name="frmSave" method="post" th:action="@{/admin/config}" autocomplete="off"></form>
-  <table calss="table-cols">
+ <form name="frmSave" method="post" th:action="@{/admin/config}" autocomplete="off">
+  <table class="table-cols">
    <tr>
      <th>사이트 제목</th>
     <td>
@@ -19,6 +19,23 @@
         <textarea name="siteDescription"></textarea>
        </td>
    </tr>
+   <tr>
+    <th>CSS,JS 버전</th>
+    <td>
+     <input type="number" name="cssJsVersion">
+    </td>
+   </tr>
+    <tr>
+     <th>이용약관</th>
+     <td>
+      <textarea name="JoinTerms"></textarea>
+     </td>
+   </tr>
   </table>
+ <div class="btns">
+  <button type="reset">다시입력</button>
+  <button type="submit">저장하기</button>
+ </div>
+</form>
 </section>
 </html>
