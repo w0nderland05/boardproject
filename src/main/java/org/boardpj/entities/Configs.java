@@ -11,6 +11,7 @@ public class Configs {
     @Id
     @Column(length = 45)
     private String Code;
+
     @Lob
     private String Value;
 }

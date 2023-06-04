@@ -69,3 +69,8 @@ h1 { font-size: 30px; font-weight: bold; margin: 0; margin-bottom: 25px; line-he
 .table-cols td { background: #fff; padding: 10px 15px; }
 .table-cols th,
 .table-cols td { border-bottom: 1px solid #d5d5d5; }
+
+/**공통 서브 메뉴 */
+nav .submenus{ background: #fff; box-shadow: 1pz 1px 5px #cdced5; margin-bottom-30px; display:flex;}
+nav .submenus a.on{ background: #596b99; color: #fff;  }
+nve .submenus a{line-height: 60px; padding : 0 40px;font-size: 18px; }

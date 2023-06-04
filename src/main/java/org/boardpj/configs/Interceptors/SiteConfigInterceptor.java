@@ -14,10 +14,11 @@ import java.util.Map;
 /**
  * 사이트 설정 유지
  */
-@Component
+@Component("siteConfig")
 @RequiredArgsConstructor
 public class SiteConfigInterceptor implements HandlerInterceptor {
     private final ConfigInfoService infoService;
+    private final HttpServletRequest request;
 
 
     //요청처리전 공통기능 추가, 접근제한 기능
@@ -29,4 +30,11 @@ public class SiteConfigInterceptor implements HandlerInterceptor {
         request.setAttribute("siteConfig", siteConfigs);
         return true;
     }
+    public String get(String name) {
+        Map<String, String> siteConfig = (Map<String, String>)request.getAttribute("siteConfig");
+        String value = siteConfig == null ? "" : siteConfig.get(name);
+
+        return value;
+    }
+
 }

@@ -27,10 +27,8 @@ public class ConfigController {
     public String config(Model model){
         commonProcess(model);
         ConfigForm configForm = infoService.get(code, ConfigForm.class);
-        if(configForm != null){
-            log.info(configForm.toString());
-        }
-        model.addAttribute("configForm",configForm);
+
+        model.addAttribute("configForm",configForm ==null ? new ConfigForm():configForm);
         return "admin/config";
 
     }

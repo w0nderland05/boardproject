@@ -4,8 +4,9 @@
 <head>
     <meta name="_csrf" th:content="${_csrf.token}">
     <meta name="_csrf_header" th:content="${_csrf.headerName}">
+    <meta name="description" th:content="${siteConfig.siteDescription}">
     <title>
-        <th:block th:if="${pageTitle != null}" th:text="${pageTitle + '::'}"></th:block>
+        <th:block th:if="${pageTitle != null}" th:text="${pageTitle + ' ::'}"></th:block>
         <th:block th:text="${siteConfig.siteTitle}"></th:block>
     </title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -22,7 +23,10 @@
 <header th:replace="~{outlines/admin/header::common}"></header>
 <main>
     <aside th:replace="~{outlines/admin/side::menu}"></aside>
-    <section layout:fragment="content"></section>
+   <section>
+       <th:block th:replace="~{admin/commons/_submenu::menus}"></th:block>
+      <section layout:fragment="content"></section>
+   </section>
 </main>
 <footer th:replace="~{outlines/admin/footer::common}"></footer>
 <iframe name="iframeProcess" class="dn"></iframe> <!--자바스크립트나 양식 페이지 이동없이 alert 이용해서 쓸때 유용한 hidden 프레임-->
