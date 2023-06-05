@@ -1,5 +1,5 @@
-# Mini Board Project<br>
-<h1>보드프로젝트<h1>
+# Mini Board Project
+보드프로젝트
 설정 -> 어드민 -> 프론트 순서대로 구현
 ***
 
