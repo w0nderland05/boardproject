@@ -3,7 +3,7 @@
 설정 -> 어드민 -> 프론트 순서대로 구현
 ***
 
-##1Day
+<h1>1Day<h1><br>
 ***
 *스프링부트 기본설정 
 *타임리프 설정 
@@ -32,7 +32,7 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
  ->인터셉터에서 버전관리 (관리자에서 버전바꾸면 자동으로 바뀌도록)
  
  
- ##2Day
+<h1>2Day<h1><br>
  *타임리프 레이아웃 admin 템플릿 구성
   ->front와 틀 동일
  *css/js 기본틀 추가  
@@ -66,7 +66,7 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
 	*join.html 완성 
 
 
-##3DAY
+<h1>3DAY<h1><br>
 *login 구현(컨트롤러 연결 , login.html생성)
 *xeicon이용하여 아이콘 추가
 
@@ -104,7 +104,7 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
 *공통오류페이지 생성
  @ExceptionHandler, @ControllerAdvice @RestControllerAdvice
  
- 4DAY
+ <h1>4DAY<h1><br>
  *공통오류페이지 처리
  -Common 일반 컨트롤러(@ControllerAdvice)
  - Common REST 컨틀롤러(@RestControllerAdvice)
@@ -129,7 +129,7 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
 		
 
 	
-##5DAY
+<h1>5DAY<h1><br>
  -사이트 설정 구현 
   - Controller 구현 설정 
    -infoservice 수정: code,class 자바객체인경우 + Map이나 List인경우 typeReference를 이용해서 value값으로 조회하도록 추가 
