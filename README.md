@@ -1,5 +1,8 @@
 # Mini board project
-설정 -> 어드민 -> 프론트 순서대로 구현
+ 설정 -> 어드민 -> 프론트 순서대로 구현
+:ab: 사용언어 : Java / HTML /CSS /JavaScript <br>
+:computer: 개발환경: SpringBoot<br>
+:floppy_disk: 데이터베이스: MySQL<br>
 ***
 
 ## 1Day
