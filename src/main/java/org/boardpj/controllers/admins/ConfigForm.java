@@ -8,6 +8,4 @@ public class ConfigForm {
     private String siteDescription;
     private String cssJsVersion;
     private String joinTerms;
-
-
 }

@@ -1,6 +1,7 @@
 package org.boardpj.models.member;
 
 import lombok.RequiredArgsConstructor;
+import org.boardpj.models.member.MemberInfo;
 import org.boardpj.entities.Member;
 import org.boardpj.repositories.MemberRepository;
 import org.springframework.security.core.GrantedAuthority;
@@ -16,14 +17,20 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class MemberInfoService implements UserDetailsService {
-private final MemberRepository repository;
+
+    private final MemberRepository repository;
+
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException { //매번세션에서 아이디 값이 넘어옴
-   Member member = repository.findByUserId(username);
-   if(member == null){
-       throw new UsernameNotFoundException(username);
-   }
-        List<GrantedAuthority> authorities= Arrays.asList(new SimpleGrantedAuthority(member.getRoles().toString()));
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+        Member member = repository.findByUserId(username);
+        if (member == null) {
+            throw new UsernameNotFoundException(username);
+        }
+
+        List<GrantedAuthority> authorities
+                = Arrays.asList(new SimpleGrantedAuthority(member.getRoles().toString()));
+
         return MemberInfo.builder()
                 .userNo(member.getUserNo())
                 .userId(member.getUserId())

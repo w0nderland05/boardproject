@@ -27,10 +27,10 @@ public class SecurityConfig {
                 .logoutRequestMatcher(new AntPathRequestMatcher("/member/logout"))
                 .logoutSuccessUrl("/member/login");
 
-        http.authorizeHttpRequests() //url패턴에 따라 접근권한 설정
-                .requestMatchers("/mypage/**").authenticated()    //회원전용 url
-               // .requestMatchers("/admin/**").hasAuthority("ADMIN") //관리자 전용
-                .anyRequest().permitAll(); //그외 모든 페이지는 모든 회원이 접근가능
+        http.authorizeHttpRequests()
+                .requestMatchers("/mypage/**").authenticated() // 회원 전용
+               // .requestMatchers("/admin/**").hasAuthority("ADMIN") // 관리자 전용
+                .anyRequest().permitAll(); // 그외 모든 페이지는 모든 회원이 접근 가능
 
         http.exceptionHandling()
                 .authenticationEntryPoint((req, res, e) -> {
@@ -44,7 +44,8 @@ public class SecurityConfig {
                     }
                 });
 
-        http.headers().frameOptions().sameOrigin();//같은 도메인내에서만 통신가능하도록
+        http.headers().frameOptions().sameOrigin();
+
         return http.build();
     }
 
@@ -55,9 +56,6 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-
-
         return new BCryptPasswordEncoder();
     }
-
 }

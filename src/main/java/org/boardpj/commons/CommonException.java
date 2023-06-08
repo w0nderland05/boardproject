@@ -4,30 +4,32 @@ import org.springframework.http.HttpStatus;
 
 import java.util.ResourceBundle;
 
-public class CommonException extends RuntimeException{
+/**
+ * 공통 예외
+ *
+ */
+public class CommonException extends RuntimeException {
+    protected static ResourceBundle bundleValidation;
+    protected static ResourceBundle bundleError;
 
-    protected static ResourceBundle bundleValidation; //메세지코드
-    protected  static ResourceBundle bundleError;//메세지코드
+    protected HttpStatus httpStatus;
 
-    protected HttpStatus httpStatus; //응답코드
-
-    static{
+    static {
         bundleValidation = ResourceBundle.getBundle("messages.validations");
         bundleError = ResourceBundle.getBundle("messages.errors");
-
     }
-    public CommonException(String message){
+
+    public CommonException(String message) {
         super(message);
         httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
     }
 
-    public CommonException(String message, HttpStatus httpStatus){
+    public CommonException(String message, HttpStatus httpStatus) {
         super(message);
-        this.httpStatus= httpStatus;
+        this.httpStatus = httpStatus;
     }
 
-    public HttpStatus getStatus(){
-
+    public HttpStatus getStatus() {
         return httpStatus;
     }
 }

@@ -23,13 +23,12 @@
 <header th:replace="~{outlines/admin/header::common}"></header>
 <main>
     <aside th:replace="~{outlines/admin/side::menu}"></aside>
-   <section>
-       <th:block th:replace="~{admin/commons/_submenu::menus}"></th:block>
-      <section layout:fragment="content"></section>
-   </section>
+    <section>
+        <th:block th:replace="~{admin/commons/_submenu::menus}"></th:block>
+        <section layout:fragment="content"></section>
+    </section>
 </main>
 <footer th:replace="~{outlines/admin/footer::common}"></footer>
-<iframe name="iframeProcess" class="dn"></iframe> <!--자바스크립트나 양식 페이지 이동없이 alert 이용해서 쓸때 유용한 hidden 프레임-->
+<iframe name="ifrmProcess" class="dn"></iframe>
 </body>
-
 </html>

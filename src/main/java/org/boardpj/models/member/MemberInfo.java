@@ -9,17 +9,17 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 
 @Data @Builder
-public class MemberInfo implements UserDetails { //회원정보 관련 클래스
+public class MemberInfo implements UserDetails {
+
     private Long userNo;
     private String userId;
     private String userPw;
     private String userNm;
     private String email;
     private String mobile;
-
     private Role roles;
 
-    private Collection<GrantedAuthority> authorities; //
+    private Collection<GrantedAuthority> authorities;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

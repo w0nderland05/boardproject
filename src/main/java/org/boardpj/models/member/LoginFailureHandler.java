@@ -9,7 +9,7 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 
 import java.io.IOException;
 
-public class LoginFailureHandler implements AuthenticationFailureHandler { //실패시 세부사항 정보
+public class LoginFailureHandler implements AuthenticationFailureHandler {
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         HttpSession session = request.getSession();
@@ -22,22 +22,22 @@ public class LoginFailureHandler implements AuthenticationFailureHandler { //실
         session.removeAttribute("global");
 
         session.setAttribute("userId", userId);
-        try{
-            if(userId == null || userId.isBlank()){
-                throw  new LoginValidationException("requiredUserId","NotBlank.userId");
+
+        try {
+            if (userId == null || userId.isBlank()) {
+                throw new LoginValidationException("requiredUserId", "NotBlank.userId");
             }
-            if(userPw == null || userPw.isBlank()){
+
+            if (userPw == null || userPw.isBlank()) {
                 throw new LoginValidationException("requiredUserPw", "NotBlank.userPw");
             }
+
             throw new LoginValidationException("global", "Validation.login.fail");
 
-        }catch (LoginValidationException e){
+        } catch (LoginValidationException e) {
             session.setAttribute(e.getField(), e.getMessage());
         }
 
-        response.sendRedirect(request.getContextPath() +"/member/login");
-
-
-
+        response.sendRedirect(request.getContextPath() + "/member/login");
     }
 }

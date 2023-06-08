@@ -15,33 +15,38 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/member")
 @RequiredArgsConstructor
 public class MemberController {
+
     private final MemberSaveService saveService;
     private final JoinValidator joinValidator;
 
     @GetMapping("/join")
-    public String join(@ModelAttribute JoinForm joinForm, Model model){
+    public String join(@ModelAttribute JoinForm joinForm, Model model) {
         commonProcess(model);
-
-
         return "member/join";
     }
 
     @PostMapping("/join")
-    public String joinPs(@Valid JoinForm joinForm, Errors errors, Model model){
+    public String joinPs(@Valid JoinForm joinForm, Errors errors, Model model) {
         commonProcess(model);
-        joinValidator.validate(joinForm, errors); //유효성 검사
-        if(errors.hasErrors()){
+
+        joinValidator.validate(joinForm, errors);
+
+        if (errors.hasErrors()) {
             return "member/join";
         }
+
         saveService.save(joinForm);
+
         return "redirect:/member/login";
     }
 
     @GetMapping("/login")
-    public String login(){
+    public String login() {
+
         return "member/login";
     }
-    private void commonProcess(Model model){
+
+    private void commonProcess(Model model) {
         model.addAttribute("pageTitle", "회원가입");
     }
 }

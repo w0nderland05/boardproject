@@ -8,9 +8,8 @@ a { text-decoration: none; }
 body { margin: 0; }
 img { border: 0; }
 
-
-/**기준넓이**/
-.layout_width{max-layout_width: 1300px; min-width: 1100px; margin: 0 auto; padding: 0 10px;}
+/** 기준 너비 */
+.layout_width { max-width: 1300px; min-width: 1100px; margin: 0 auto; padding: 0 10px; }
 
 /** 기본 스타일 - 입력 */
 input[type='text'],
@@ -30,6 +29,5 @@ input[type='radio']:checked+label { background:url("../../images/radio-on.png") 
 
 .dn { display: none !important; }
 
-/**기본 약관 스타일 */
-.terms {height: 200px; overflow-y:scroll; border: 1px solid #d5d5d5; padding: 10px;
-border-radius:3px; word-break: break-all;}
+/** 기본 약관 스타일 */
+.terms { height: 200px; overflow-y: scroll; border: 1px solid #d5d5d5; padding: 10px; border-radius: 3px; word-break: break-all; }
