@@ -1,6 +1,8 @@
 package org.boardpj.commons;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.Data;
+import org.springframework.ui.Model;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -21,4 +23,10 @@ public class Menus {
         }
         return menus;
     }
+    public static String getSubMenuCode(HttpServletRequest request) {
+        String URI = request.getRequestURI();
+
+        return URI.substring(URI.lastIndexOf('/') + 1);
+    }
+
 }
