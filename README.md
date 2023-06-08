@@ -1,52 +1,22 @@
-<<<<<<< HEAD
-# Mini Board Project
-보드프로젝트
-설정 -> 어드민 -> 프론트 순서대로 구현
+# Mini board project
+ 설정 -> 어드민 -> 프론트 순서대로 구현 <br>
+:ab: 사용언어 : Java / HTML /CSS /JavaScript <br>
+:computer: 개발환경: SpringBoot<br>
+:floppy_disk: 데이터베이스: MySQL<br>
 ***
 
-<<<<<<< HEAD
-##1Day
-=======
 ## 1Day
->>>>>>> 7fa00b0150a4bf3388a950db0f87466215c65c9d
-***
 *스프링부트 기본설정 
 *타임리프 설정 
 *초기세팅 
-=======
-# Mini Board Project <br>
-보드프로젝트
-***
- 
-## 1Day
-*스프링부트 기본설정 
-*타임리프 설정 
-초기세팅 
->>>>>>> a9e8de9e8d26e5fcc76a95838472db607a6fd898
 - 스프링 부트 초기 설정
  -> 레포지토리 생성, 로컬저장소 만들고 연동하기 (소스트리 클론)
  -> 인텔리제이 파일 생성 (의존라이브러리 함께 설치 )
   - 롬복,스프링부트 웹, 타임리프, 데브툴, JPA , MYSQL Driver, H2, Validation
-<<<<<<< HEAD
 ->추가 메이븐 라이브러리 (My sql connector/j , Thymeleaf layout , ModelMapper) + querydsl디펜더시에는 classifier jakarta 추가 
 -> 플러그인 설정 : 백그라운드 프로그램 , 뒤에서 모니터링 하면서 자동생성하는 등의 역할을 함 
 -설정 :AutoMaker(프로젝트 자동빌드), fileEncoding:UTF-8
    
-=======
-
-workbench 연결 
-
-스프링 시큐리티 기본
-타임리프 기본 레이아웃
-
-## 2Day
-*타임리프 레이아웃 템플릿 완성
-*스프링 시큐리티 설정
-*관리자 페이지
-  - 기본설정
-  - 게시판 설정
-  
->>>>>>> a9e8de9e8d26e5fcc76a95838472db607a6fd898
 
 *workbench 연결 
 
@@ -62,13 +32,8 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
 -> 읽어드릴수 있도록 MvcConfig설정
  ->인터셉터에서 버전관리 (관리자에서 버전바꾸면 자동으로 바뀌도록)
  
-***
-<<<<<<< HEAD
-##2Day
-=======
-## 2Day
->>>>>>> 7fa00b0150a4bf3388a950db0f87466215c65c9d
-***
+ ***
+ ## 2Day
  *타임리프 레이아웃 admin 템플릿 구성
   ->front와 틀 동일
  *css/js 기본틀 추가  
@@ -101,13 +66,8 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
 	*JoinController 유효성검사 적용 	 
 	*join.html 완성 
 
-***
-<<<<<<< HEAD
-##3DAY
-=======
-## 3DAY
->>>>>>> 7fa00b0150a4bf3388a950db0f87466215c65c9d
-***
+ ***
+ ## 3DAY
 *login 구현(컨트롤러 연결 , login.html생성)
 *xeicon이용하여 아이콘 추가
 
@@ -144,14 +104,9 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
 		 -((Object) getPrincipal():비회원(String): anonymousUser, 회원일때 :UserDetails 구현 객체 
 *공통오류페이지 생성
  @ExceptionHandler, @ControllerAdvice @RestControllerAdvice
-
-***
-<<<<<<< HEAD
-##4DAY
-=======
-## 4DAY
->>>>>>> 7fa00b0150a4bf3388a950db0f87466215c65c9d
-***
+ 
+ ***
+ ## 4DAY
  *공통오류페이지 처리
  -Common 일반 컨트롤러(@ControllerAdvice)
  - Common REST 컨틀롤러(@RestControllerAdvice)
@@ -175,14 +130,9 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
 		 -DeleteService 
 		
 
-***	
-<<<<<<< HEAD
-##5DAY
-=======
-## 5DAY
-
-***
->>>>>>> 7fa00b0150a4bf3388a950db0f87466215c65c9d
+	
+ ***
+ ## 5DAY
  -사이트 설정 구현 
   - Controller 구현 설정 
    -infoservice 수정: code,class 자바객체인경우 + Map이나 List인경우 typeReference를 이용해서 value값으로 조회하도록 추가 
@@ -197,3 +147,4 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
 	Menu조회기능 : MenuDetails, Menu클래스 
 	
     -submenu.html  css 설정 
+	-config.html 게시판등록 양식 추가 
