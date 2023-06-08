@@ -44,7 +44,7 @@ public class BoardController {
     @GetMapping("/{bId}/update")
     public String update(@PathVariable String bId, Model model) {
         commonProcess(model, "게시판 수정");
-        
+
         return "admin/board/config";
     }
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mini Board Project
 보드프로젝트
 설정 -> 어드민 -> 프론트 순서대로 구현
@@ -8,14 +9,40 @@
 *스프링부트 기본설정 
 *타임리프 설정 
 *초기세팅 
+=======
+# Mini Board Project <br>
+보드프로젝트
+***
+ 
+## 1Day
+*스프링부트 기본설정 
+*타임리프 설정 
+초기세팅 
+>>>>>>> a9e8de9e8d26e5fcc76a95838472db607a6fd898
 - 스프링 부트 초기 설정
  -> 레포지토리 생성, 로컬저장소 만들고 연동하기 (소스트리 클론)
  -> 인텔리제이 파일 생성 (의존라이브러리 함께 설치 )
   - 롬복,스프링부트 웹, 타임리프, 데브툴, JPA , MYSQL Driver, H2, Validation
+<<<<<<< HEAD
 ->추가 메이븐 라이브러리 (My sql connector/j , Thymeleaf layout , ModelMapper) + querydsl디펜더시에는 classifier jakarta 추가 
 -> 플러그인 설정 : 백그라운드 프로그램 , 뒤에서 모니터링 하면서 자동생성하는 등의 역할을 함 
 -설정 :AutoMaker(프로젝트 자동빌드), fileEncoding:UTF-8
    
+=======
+
+workbench 연결 
+
+스프링 시큐리티 기본
+타임리프 기본 레이아웃
+
+## 2Day
+*타임리프 레이아웃 템플릿 완성
+*스프링 시큐리티 설정
+*관리자 페이지
+  - 기본설정
+  - 게시판 설정
+  
+>>>>>>> a9e8de9e8d26e5fcc76a95838472db607a6fd898
 
 *workbench 연결 
 

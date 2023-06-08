@@ -1,6 +1,9 @@
 package org.boardpj.commons;
 
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.Data;
+import org.springframework.ui.Model;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,4 +32,5 @@ public class Menus {
 
         return URI.substring(URI.lastIndexOf('/') + 1);
     }
+
 }
