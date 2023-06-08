@@ -1,7 +1,7 @@
 package org.boardpj.repositories;
 
 import org.boardpj.entities.Member;
-import org.koreait.entities.QMember;
+import org.boardpj.entities.QMember;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 
