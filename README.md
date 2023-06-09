@@ -148,3 +148,15 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
 	
     -submenu.html  css 설정 
 	-config.html 게시판등록 양식 추가 
+
+***	
+## 6DAY
+게시판 설정
+ Board : 게시판 설정 엔티티
+    - BoardRepository 생성
+    - BoardConfigInfoService : 접근권한 설정조회
+    - BoardConfigSaveService : 게시판 저장 혹은 기존게시판수정
+	- BoardConfigListService : 게시판 조회  (검색 조회 기능을 위해 BoardSearch 클래스 추가 ) 
+	-> 서비스 구현후 컨트롤러 설정 
+ BoardData : 게시글 데이터
+ 게시판 목록 
