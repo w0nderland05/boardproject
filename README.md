@@ -158,5 +158,13 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
     - BoardConfigSaveService : 게시판 저장 혹은 기존게시판수정
 	- BoardConfigListService : 게시판 조회  (검색 조회 기능을 위해 BoardSearch 클래스 추가 ) 
 	-> 서비스 구현후 컨트롤러 설정 
- BoardData : 게시글 데이터
- 게시판 목록 
+   index.html 구현
+   
+***
+## 7DAY
+ 관리자페이지
+ -게시판 목록 구현 : 게시판 등록시 해당부분에 목록 조회됨
+ -프론트페이지
+   게시글 목록(list), 글작성(wite), 수정(update) +비회원인경우 추가 
+ -컨트롤러 설정 
+

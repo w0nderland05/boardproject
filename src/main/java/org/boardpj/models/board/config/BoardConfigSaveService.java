@@ -12,8 +12,10 @@ import org.springframework.validation.Errors;
  * 게시판 설정 추가, 수정
  *
  */
-@Service@RequiredArgsConstructor
+@Service
+@RequiredArgsConstructor
 public class BoardConfigSaveService {
+
     private final BoardRepository boardRepository;
 
     public void save(BoardForm boardForm) {

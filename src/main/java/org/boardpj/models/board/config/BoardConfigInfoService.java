@@ -10,18 +10,24 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class BoardConfigInfoService {
-    private final BoardRepository boardRepository;
-    private  final MemberUtil memberUtil;
 
-    public Board get(String bId, String location){
+    private final BoardRepository boardRepository;
+    private final MemberUtil memberUtil;
+
+    public Board get(String bId, String location) { // 프론트, 접근 권한 체크
         return get(bId, false, location);
     }
 
     /**
      * 게시판 설정 조회
-     * isAdmin: true -권한 체크 x
-     *        : false - 권한 체크, location으로 목록, 보기, 글쓰기, 답글, 댓글
-     * location:기능: 기능 위치(list, view, write, reply, comment)
+     *
+     * @param bId
+     * @param isAdmin : true - 권한 체크 X
+     *                : false - 권한 체크, location으로 목록, 보기, 글쓰기, 답글, 댓글
+     *
+     * @param location : 기능 위치(list, view, write, reply, comment)
+     *
+     * @return
      */
     public Board get(String bId, boolean isAdmin, String location) {
 
@@ -34,15 +40,16 @@ public class BoardConfigInfoService {
         return board;
     }
 
-    public Board get(String bId, boolean isAdmin){
+    public Board get(String bId, boolean isAdmin) {
         return get(bId, isAdmin, null);
     }
+
     /**
      * 접근 권한 체크
      *
      * @param board
      */
-    public void accessCheck(Board board, String location){
+    private void accessCheck(Board board, String location) {
         Role role = Role.ALL;
         if (location.equals("list")) { // 목록 접근 권한
             role = board.getListAccessRole();
@@ -52,6 +59,9 @@ public class BoardConfigInfoService {
 
         } else if (location.equals("write")) { // 글쓰기 권한
             role = board.getWriteAccessRole();
+
+            /** 비회원 게시글 여부 */
+            if (!memberUtil.isLogin()) board.setGuest(true);
 
         } else if (location.equals("reply")) { // 답글 권한
             role = board.getReplyAccessRole();
@@ -65,6 +75,7 @@ public class BoardConfigInfoService {
                 || (role == Role.ADMIN && !memberUtil.isAdmin())) {
             throw new BoardNotAllowAccessException();
         }
+
 
     }
 

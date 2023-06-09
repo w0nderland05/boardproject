@@ -47,6 +47,7 @@ public class BoardController {
 
     /**
      * 게시판 등록
+     *
      * @return
      */
     @GetMapping("/register")
@@ -71,6 +72,7 @@ public class BoardController {
         model.addAttribute("boardForm", boardForm);
         return "admin/board/config";
     }
+
     @PostMapping("/save")
     public String save(@Valid BoardForm boardForm, Errors errors, Model model) {
         String mode = boardForm.getMode();
@@ -89,11 +91,15 @@ public class BoardController {
 
         return "redirect:/admin/board"; // 게시판 목록
     }
+
     private void commonProcess(Model model, String title) {
         String URI = request.getRequestURI();
 
         // 서브 메뉴 처리
         String subMenuCode = Menus.getSubMenuCode(request);
+
+        subMenuCode = title.equals("게시판 수정") ? "register" : subMenuCode;
+
         model.addAttribute("subMenuCode", subMenuCode);
 
         List<MenuDetail> submenus = Menus.gets("board");
