@@ -165,14 +165,10 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
  관리자페이지
  -게시판 목록 구현 : 게시판 등록시 해당부분에 목록 조회됨
  -프론트페이지
-   게시글 목록(list), 글작성(wite), 수정(update) +비회원인경우 추가 
+   게시글 목록(list), 글작성(wite), 수정(update) +비회원인경우 비밀번호사용하도록 구현 
  -컨트롤러 설정 
  
  ***
  ## 8DAY
- 프론트페이지
-  게시글 쓰기
-  파일업로드
-  게시글 보기
-  게시글 목록
-
+ 프론트페이지(게시글 목록(list), 글작성(wite), 수정(update))
+   - 유효성 검사 (Validator) 추가, 데이터저장 서비스 구현(BoardData 엔티티, BaordDataRepository 추가) , 작성후 이동경로 설정
