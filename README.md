@@ -167,4 +167,12 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
  -프론트페이지
    게시글 목록(list), 글작성(wite), 수정(update) +비회원인경우 추가 
  -컨트롤러 설정 
+ 
+ ***
+ ## 8DAY
+ 프론트페이지
+  게시글 쓰기
+  파일업로드
+  게시글 보기
+  게시글 목록
 

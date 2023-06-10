@@ -13,6 +13,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BoardForm {
+
     private Long id; // 게시글 번호
 
     @NotBlank

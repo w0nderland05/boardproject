@@ -5,13 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.boardpj.entities.BaseMemberEntity;
 import org.boardpj.commons.constants.Role;
 
-@Entity
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+import java.util.Arrays;
+
+@Entity @Data @Builder
+@NoArgsConstructor @AllArgsConstructor
 public class Board extends BaseMemberEntity {
     @Id
     @Column(length=30)
