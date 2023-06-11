@@ -15,7 +15,8 @@
 ![게시판등록](https://github.com/w0nderland05/boardproject/blob/master/%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%93%B1%EB%A1%9D.png?raw=true)
 * 게시글 작성
 ![게시글 작성](https://github.com/w0nderland05/boardproject/blob/master/%EA%B2%8C%EC%8B%9C%EA%B8%80%20%EC%9E%91%EC%84%B1.png?raw=true)
-
+* 조건에 따른 검색기능 시현
+![조건에따른 검색기능영상](https://github.com/w0nderland05/boardproject/assets/111275210/e3df16db-d824-4cbd-9c21-a2beea35d4bf)
 
 ## 1Day
  * 스프링부트 기본설정 
