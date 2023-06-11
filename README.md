@@ -170,5 +170,31 @@ Templates 구성 (layouts-adimin/front/mobile ,main-index, outlines-adimin/front
  
  ***
  ## 8DAY
- 프론트페이지(게시글 목록(list), 글작성(wite), 수정(update))
+ 프론트페이지
    - 유효성 검사 (Validator) 추가, 데이터저장 서비스 구현(BoardData 엔티티, BaordDataRepository 추가) , 작성후 이동경로 설정
+   
+ ***
+ ## 9DAY
+ 프론트페이지
+  - 게시글 보기
+  - 파일업로드  
+
+
+ ***
+ ## 10일차
+  프론트페이지
+   -게시글 보기
+   -조회수 구현
+   -IP + 브라우저 정보(UserAgent) + 회원번호(없으면 비회원, 있으면 회원) -> hashcode -> Objects.hashcode
+
+ ***
+ ## 11일차
+프론트페이지
+-조회수 구현
+- 게시글 수정, 게시글 삭제
+- 관리자 - 가능, 회원 - 동일 회원, 비회원 - 비밀번호 인증 성공(세션에 기록)
+
+ ***
+ ## 12일차
+프론트페이지
+ -파일 업로드 구현
