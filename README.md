@@ -6,15 +6,15 @@
 ***
 ## 화면구성 
 * 관리자메인 
-![관리자 메인](https://github.com/w0nderland05/boardproject/blob/master/%EA%B4%80%EB%A6%AC%EC%9E%90%EA%B2%8C%EC%8B%9C%ED%8C%90%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true)
+![관리자게시판메인페이지](https://github.com/w0nderland05/boardproject/assets/111275210/1d7c0e40-299f-4e11-985d-7ff8eab6e340)
 * 사이트설정
- ![사이트설정](https://github.com/w0nderland05/boardproject/blob/master/%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EC%84%A4%EC%A0%95.png?raw=true)
+![사이트 설정](https://github.com/w0nderland05/boardproject/assets/111275210/2202ea4c-aec2-4420-a302-8927ae8e5378)
 * 게시판목록
-![게시판목록](https://github.com/w0nderland05/boardproject/blob/master/%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%AA%A9%EB%A1%9D.png?raw=true)
+![게시판 목록](https://github.com/w0nderland05/boardproject/assets/111275210/0c863098-e9f2-4c6b-94d0-dd0e55088113)
 * 게시판등록
-![게시판등록](https://github.com/w0nderland05/boardproject/blob/master/%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%93%B1%EB%A1%9D.png?raw=true)
+![게시판 등록](https://github.com/w0nderland05/boardproject/assets/111275210/9ec0c155-29e6-485d-b90f-f0757e4062a0)
 * 게시글 작성
-![게시글 작성](https://github.com/w0nderland05/boardproject/blob/master/%EA%B2%8C%EC%8B%9C%EA%B8%80%20%EC%9E%91%EC%84%B1.png?raw=true)
+![게시글 작성](https://github.com/w0nderland05/boardproject/assets/111275210/c530a345-cb62-4d1a-b491-7f3e57aca61e)
 * 조건에 따른 검색기능 시현
 ![조건에따른 검색기능영상](https://github.com/w0nderland05/boardproject/assets/111275210/e3df16db-d824-4cbd-9c21-a2beea35d4bf)
 
