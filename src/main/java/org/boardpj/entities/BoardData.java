@@ -8,11 +8,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@Entity
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity @Data @Builder
+@AllArgsConstructor @NoArgsConstructor
 @Table(indexes={
         @Index(name="idx_boarddata_category", columnList = "category DESC"),
         @Index(name="idx_boarddata_createAt", columnList = "createdAt DESC")
