@@ -22,11 +22,9 @@ public class BoardConfigInfoService {
      * 게시판 설정 조회
      *
      * @param bId
-     * @param isAdmin : true - 권한 체크 X
-     *                : false - 권한 체크, location으로 목록, 보기, 글쓰기, 답글, 댓글
-     *
+     * @param isAdmin  : true - 권한 체크 X
+     *                 : false - 권한 체크, location으로 목록, 보기, 글쓰기, 답글, 댓글
      * @param location : 기능 위치(list, view, write, reply, comment)
-     *
      * @return
      */
     public Board get(String bId, boolean isAdmin, String location) {
@@ -50,6 +48,14 @@ public class BoardConfigInfoService {
      * @param board
      */
     private void accessCheck(Board board, String location) {
+
+        /**
+         * use - false : 모든 항목 접근 불가, 단 관리자만 가능
+         */
+        if (!board.isUse() && !memberUtil.isAdmin()) {
+            throw new BoardNotAllowAccessException();
+        }
+
         Role role = Role.ALL;
         if (location.equals("list")) { // 목록 접근 권한
             role = board.getListAccessRole();
@@ -78,6 +84,4 @@ public class BoardConfigInfoService {
 
 
     }
-
-
 }

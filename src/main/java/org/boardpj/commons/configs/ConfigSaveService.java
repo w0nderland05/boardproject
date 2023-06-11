@@ -22,7 +22,7 @@ public class ConfigSaveService {
         try {
             value = om.writeValueAsString(t);
         } catch (JsonProcessingException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
 
         configs.setCode(code);
